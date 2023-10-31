@@ -1,14 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import useOnScreen from "../../hooks/useOnScreen";
 import DesktopPhoneNumberInput from "../phoneNumberInput/desktop";
 
 const USPsExplained = () => {
 	const ref = useRef(null);
 	const isVisible = useOnScreen(ref);
-
-	useEffect(() => {
-		console.log("ISVISIBLE ", isVisible);
-	}, [isVisible]);
 
 	return (
 		<>

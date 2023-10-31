@@ -7,8 +7,10 @@ import HeroSection from "./components/heroSection";
 import Logo from "./components/logo";
 import Paycheck from "./components/paycheckButton";
 import MobilePhoneNumberInput from "./components/phoneNumberInput/mobile";
+import SecurityStandards from "./components/securityStandards";
 import USPsExplained from "./components/USPsExplained";
 import VideoBackground from "./components/videoBackground";
+import Footer from "./footer";
 
 function App() {
 	return (
@@ -28,6 +30,8 @@ function App() {
 			<Commitments />
 			<ComplianceNote />
 			<DownloadBanner />
+			<SecurityStandards />
+			<Footer />
 			<MobilePhoneNumberInput />
 		</>
 	);
