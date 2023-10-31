@@ -1,13 +1,36 @@
 import "./App.css";
+import Commitments from "./components/commitments";
+import ComplianceNote from "./components/complianceNote";
+import DownloadBanner from "./components/downloadBanner";
+import FeatureCard from "./components/featureCard";
+import HeroSection from "./components/heroSection";
+import Logo from "./components/logo";
+import Paycheck from "./components/paycheckButton";
+import MobilePhoneNumberInput from "./components/phoneNumberInput/mobile";
+import USPsExplained from "./components/USPsExplained";
+import VideoBackground from "./components/videoBackground";
 
 function App() {
-  return (
-    <main className="flex justify-center gap-4 flex-col min-h-screen">
-      <h1 className="text-3xl text-center font-bold underline">React & Tailwind CSS Starter Pack</h1>
-      <p className="text-center text-xl">This is a starter pack for React & Tailwind CSS projects.</p>
-      <img src="https://bit.ly/3wsmzTy" alt="meme" className="mx-auto" />
-    </main>
-  );
+	return (
+		<>
+			<main className=' min-w-screen min-h-screen p-0 md:px-[45px]'>
+				<VideoBackground />
+				<section className='relative flex justify-between items-center'>
+					<Logo />
+					<Paycheck />
+				</section>
+				<div className='mt-40 md:mt-32'>
+					<HeroSection />
+				</div>
+			</main>
+			<USPsExplained />
+			<FeatureCard />
+			<Commitments />
+			<ComplianceNote />
+			<DownloadBanner />
+			<MobilePhoneNumberInput />
+		</>
+	);
 }
 
 export default App;
