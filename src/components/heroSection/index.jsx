@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import DesktopPhoneNumberInput from "../phoneNumberInput/desktop";
+import TermsAndCondn from "../termsAndCondn";
 import { UNIQUE_SELLING_PONTS } from "./constants";
 
 const renderUSPs = () => {
@@ -28,8 +29,6 @@ const renderUSPs = () => {
 };
 
 const HeroSection = () => {
-	const [isWhatsappAllowed, setIsWhatsappAllowed] = useState(false);
-
 	return (
 		<section className='flex flex-col md:flex-row-reverse mx-auto max-w-[1280px] w-full justify-center z-1 bg-transparent'>
 			<img
@@ -46,20 +45,7 @@ const HeroSection = () => {
 				<div className='mt-4 md:mt-0'>{renderUSPs()}</div>
 				<div className='hidden md:block'>
 					<DesktopPhoneNumberInput />
-					<div className='consent flex items-center py-4 px-2 max-w-xs'>
-						<input
-							type='checkbox'
-							checked={isWhatsappAllowed}
-							onChange={() => setIsWhatsappAllowed((s) => !s)}
-							id='whatsapp-allow'
-							className='mr-2 cursor-pointer'></input>
-						<label
-							for='whatsapp-allow'
-							className='consent text-white md:text-black text-[10px] leading-3 cursor-pointer'>
-							You agree to be contacted by Uni Cards over Call, SMS, Email or
-							WhatsApp to guide you through your application.
-						</label>
-					</div>
+					<TermsAndCondn />
 				</div>
 			</div>
 		</section>
